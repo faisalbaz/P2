@@ -56,7 +56,7 @@
             <button type="submit" class="input-group">Household Cost</button>
          </section>
       </div>
-	<input type="hidden" name="submitted" value="true" />
+	<input type="hidden" name="formSubmitted" value="true" />
 </form>
 </body>
 </html>

@@ -15,7 +15,7 @@ global $StateTaxRate;
 	return $totalCost; 
 } 
 
-if (isset($_POST['submitted'])){
+if (isset($_POST['formSubmitted'])){
 	
 	if ( is_numeric($_POST['productQty']) & is_numeric($_POST['productPrice']) & is_numeric($_POST['productQtyNT'])  & is_numeric($_POST['productPriceNT'])){
 		
