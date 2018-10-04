@@ -20,10 +20,12 @@ if (isset($_POST['formSubmitted'])){
 	if ( is_numeric($_POST['productQty']) & is_numeric($_POST['productPrice']) & is_numeric($_POST['productQtyNT'])  & is_numeric($_POST['productPriceNT'])){
 		
 		$totalCost = householdCost($_POST['productQty'], $_POST['productPrice'],$_POST['productQtyNT'],$_POST['productPriceNT']);
+		echo '<p> You have agreed to our following terms:' , $_POST['terms'];
 		echo '<h1> Your total household Spendings:</h1>';
 		 echo "<h3> Total: $$totalCost</h3>";
 	} else { 
-		echo '<p>Only enter numeric product quantities and product price.</p>';
+		echo '<p>The value you entered is not valid.</p>';
+		
 	}
 }
 

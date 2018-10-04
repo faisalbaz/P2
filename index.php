@@ -1,13 +1,15 @@
 <?php
    include('calcCost.php');
-   
-     ?>
+   ?>
 <!DOCTYPE HTML>
 <html lang="en">
    <head>
       <title>Your Household Expenses</title>
+      <meta charset='utf-8'>
       <link rel="stylesheet" type="text/css" href="style.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js'></script>
+      <script  src="index.js"></script>
    </head>
    <body>
       <div class="header">
@@ -20,23 +22,44 @@
          <div class="test4"><a href="https://p1-faisalbaz.000webhostapp.com/" target="_blank"><i class="fa fa-archive fa-2x" title="Project 1"></i></a></div>
          <div class="mask2"><i class="fa fa-home fa-5x" ></i></div>
       </div>
-      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js'></script>
-      <script  src="index.js"></script>
       <form action="calcCost.php" method="post" >
          <div class="input-group">
-            Taxable Quantity: <input type="number" name="productQty"  value="<?php echo $productQty; ?>" size="10" />
+            Taxable Quantity:
          </div>
          <div class="input-group">
-            Price: <input type="text" name="productPrice"  value="<?php echo $productPrice; ?>" size="10" />
+            <span class='spanText'>Enter only numeric value here.</span>
+            <input type='text' name='productQty' value="<?php echo $productQty; ?>" size="10">
+            <span class='spanText'>*</span>
          </div>
          <div class="input-group">
-            State Tax Rate: <input type="text" name="StateTaxRate"  value="<?php echo $StateTaxRate; ?>" size="10" />
+            Cost: 
          </div>
          <div class="input-group">
-            Non Taxable Quantity: <input type="number" name="productQtyNT" value="<?php echo $productQtyNT; ?>" size="10" />
+            <input type="text" name="productPrice"  value="<?php echo $productPrice; ?>" size="10" />
+            <span class='spanText'>*</span>
          </div>
          <div class="input-group">
-            Price: <input type="text" name="productPriceNT"  value="<?php echo $productPriceNT; ?>" size="10" />
+            State Tax Rate:
+         </div>
+         <div class="input-group">
+            <span class='spanText'>Enter your State Tax Rate here.</span>
+            <input type="text" name="StateTaxRate"  value="<?php echo $StateTaxRate; ?>" size="10" />
+            <span class='spanText'>*</span>
+         </div>
+         <div class="input-group">
+            Non Taxable Quantity:
+         </div>
+         <div class="input-group">
+            <span class='spanText'>Enter only numeric value here.</span>
+            <input type='text' name='productQtyNT' value="<?php echo $productQtyNT; ?>" size="10">
+            <span class='spanText'>*</span>
+         </div>
+         <div class="input-group">
+            Cost: 
+         </div>
+         <div class="input-group">
+            <input type="text" name="productPriceNT"  value="<?php echo $productPriceNT; ?>" size="10" />
+            <span class='spanText'>*</span>
          </div>
          <div class="input-group">
             <label>Terms and Conditions</label>
